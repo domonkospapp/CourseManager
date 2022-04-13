@@ -18,7 +18,6 @@ public class CourseRegistrationEvaluator {
                 lastRegistrations.put(r.getCourseParticipant(), r);
             }
         });
-
         return lastRegistrations.values().stream().filter(CourseRegistration::isEnrolled).map(CourseRegistration::getCourseParticipant).collect(Collectors.toList());
     }
 }
